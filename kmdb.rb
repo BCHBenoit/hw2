@@ -98,6 +98,42 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+new_row_studios_table = Studio.new
+    new_row_studios_table["name"] = "Warner Bros."
+new_row_studios_table.save
+
+
+get_studios_table = Studio.all
+get_warnerbros_row = get_studios_table.find_by({"name" => "Warner Bros."})
+get_warnerbros_studioid = get_warnerbros_row["id"]
+
+new_row_movies_table = Movie.new
+    new_row_movies_table["title"] = "Batman Begins"
+    new_row_movies_table["year_released"] = 2005
+    new_row_movies_table["rated"] = "PG-13"
+    new_row_movies_table["studio_id"] = get_warnerbros_studioid
+new_row_movies_table.save
+
+new_row_movies_table = Movie.new
+    new_row_movies_table["title"] = "The Dark Knight"
+    new_row_movies_table["year_released"] = 2008
+    new_row_movies_table["rated"] = "PG-13"
+    new_row_movies_table["studio_id"] = get_warnerbros_studioid
+new_row_movies_table.save
+
+new_row_movies_table = Movie.new
+    new_row_movies_table["title"] = "The Dark Knight Rises"
+    new_row_movies_table["year_released"] = 2012
+    new_row_movies_table["rated"] = "PG-13"
+    new_row_movies_table["studio_id"] = get_warnerbros_studioid
+new_row_movies_table.save
+
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = 
+
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
