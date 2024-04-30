@@ -174,6 +174,30 @@ new_row_actors_table = Actor.new
 new_row_actors_table.save
 
 
+get_movie_table = Movie.all
+
+get_batmanbegins_row = get_movie_table.find_by({"title" => "Batman Begins"})
+get_batmanbegins_movieid = get_batmanbegins_row["id"]
+
+get_thedarkknight_row = get_movie_table.find_by({"title" => "The Dark Knight"})
+get_thedarkknight_movieid = get_thedarkknight_row["id"]
+
+get_thedarkknightrises_row = get_movie_table.find_by({"title" => "The Dark Knight Rises"})
+get_thedarkknightrises_movieid = get_thedarkknightrises_row["id"]
+
+
+get_actors_table = Actor.all
+
+get_christianbale_row = get_actors_table.find_by({"name" => "Christian Bale"})
+get_christianbale_actorid = get_christianbale_row["id"]
+
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_batmanbegins_movieid
+    new_row_roles_table["actor_id"] = get_christianbale_actorid
+    new_row_roles_table["character_name"] = "Bruce Wayne"
+new_row_roles_table.save
+
 
 
 # Prints a header for the movies output
