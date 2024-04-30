@@ -130,7 +130,49 @@ new_row_movies_table.save
 
 
 new_row_actors_table = Actor.new
-    new_row_actors_table["name"] = 
+    new_row_actors_table["name"] = "Christian Bale"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Michael Caine"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Liam Neeson"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Katie Holmes"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Gary Oldman"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Heath Ledger"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Aaron Eckhart"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Maggie Gyllenhaal"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Tom Hardy"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Joseph Gordon-Levitt"
+new_row_actors_table.save
+
+new_row_actors_table = Actor.new
+    new_row_actors_table["name"] = "Anne Hathaway"
+new_row_actors_table.save
+
 
 
 
