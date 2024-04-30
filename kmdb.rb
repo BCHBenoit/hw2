@@ -363,16 +363,15 @@ get_actors_table = Actor.all
 actor_id2 = 0
 actor_name = 0
 
-
 for row_role in get_roles_table
     movie_id2 = row_role["movie_id"]
     movie_title = get_movies_table.find_by({"id" => movie_id2})["title"]
-    p movie_title
 
     actor_id2 = row_role["actor_id"]
     actor_name = get_actors_table.find_by({"id" => actor_id2})["name"]
-    p actor_name
+   
+    row_role["character_name"]
 
-    p row_role["character_name"]
+    p "#{movie_title} #{actor_name} #{row_role["character_name"]}"
 end
 
