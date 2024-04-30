@@ -328,6 +328,7 @@ get_movies_table = Movie.all
 row_movies = 0
 
 get_studios_table = Studio.all
+studio_id = 0
 studio_name = 0
 
 
@@ -350,3 +351,28 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+get_roles_table = Role.all
+row_role = 0
+
+get_movies_table = Movie.all
+movie_id2 = 0
+movie_title = 0
+
+get_actors_table = Actor.all
+actor_id2 = 0
+actor_name = 0
+
+
+for row_role in get_roles_table
+    movie_id2 = row_role["movie_id"]
+    movie_title = get_movies_table.find_by({"id" => movie_id2})["title"]
+    p movie_title
+
+    actor_id2 = row_role["actor_id"]
+    actor_name = get_actors_table.find_by({"id" => actor_id2})["name"]
+    p actor_name
+
+    p row_role["character_name"]
+end
+
