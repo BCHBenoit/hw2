@@ -191,11 +191,60 @@ get_actors_table = Actor.all
 get_christianbale_row = get_actors_table.find_by({"name" => "Christian Bale"})
 get_christianbale_actorid = get_christianbale_row["id"]
 
+get_michaelcaine_row = get_actors_table.find_by({"name" => "Michael Caine"})
+get_michaelcaine_actorid = get_michaelcaine_row["id"]
+
+get_liamneeson_row = get_actors_table.find_by({"name" => "Liam Neeson"})
+get_liamneeson_actorid = get_liamneeson_row["id"]
+
+get_katieholmes_row = get_actors_table.find_by({"name" => "Katie Holmes"})
+get_katieholmes_actorid = get_katieholmes_row["id"]
+
+get_garyoldman_row = get_actors_table.find_by({"name" => "Gary Oldman"})
+get_garyoldman_actorid = get_garyoldman_row["id"]
+
+get_heathledger_row = get_actors_table.find_by({"name" => "Heath Ledger"})
+get_heathledger_actorid = heathledger_row["id"]
+
+get_aaroneckhart_row = get_actors_table.find_by({"name" => "Aaron Eckhart"})
+get_aaroneckhart_actorid = aaroneckhart_row["id"]
+
+get_maggiegyllenhaal_row = get_actors_table.find_by({"name" => "Maggie Gyllenhaal"})
+get_maggiegyllenhaal_actorid = maggiegyllenhaal_row["id"]
+
+get_tomhardy_row = get_actors_table.find_by({"name" => "Tom Hardy"})
+get_tomhardy_actorid = tomhardy_row["id"]
+
+get_josephgordonlevitt_row = get_actors_table.find_by({"name" => "Joseph Gordon-Levitt"})
+get_josephgordonlevitt_actorid = josephgordonlevitt_row["id"]
+
+get_annehathaway_row = get_actors_table.find_by({"name" => "Anne Hathaway"})
+get_annehathaway_actorid = annehathaway_row["id"]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 new_row_roles_table = Role.new
     new_row_roles_table["movie_id"] = get_batmanbegins_movieid
     new_row_roles_table["actor_id"] = get_christianbale_actorid
     new_row_roles_table["character_name"] = "Bruce Wayne"
+new_row_roles_table.save
+
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_batmanbegins_movieid
+    new_row_roles_table["actor_id"] = get_michaelcaine_actorid
+    new_row_roles_table["character_name"] = "Alfred"
 new_row_roles_table.save
 
 
