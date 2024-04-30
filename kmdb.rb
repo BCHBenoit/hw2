@@ -204,34 +204,22 @@ get_garyoldman_row = get_actors_table.find_by({"name" => "Gary Oldman"})
 get_garyoldman_actorid = get_garyoldman_row["id"]
 
 get_heathledger_row = get_actors_table.find_by({"name" => "Heath Ledger"})
-get_heathledger_actorid = heathledger_row["id"]
+get_heathledger_actorid = get_heathledger_row["id"]
 
 get_aaroneckhart_row = get_actors_table.find_by({"name" => "Aaron Eckhart"})
-get_aaroneckhart_actorid = aaroneckhart_row["id"]
+get_aaroneckhart_actorid = get_aaroneckhart_row["id"]
 
 get_maggiegyllenhaal_row = get_actors_table.find_by({"name" => "Maggie Gyllenhaal"})
-get_maggiegyllenhaal_actorid = maggiegyllenhaal_row["id"]
+get_maggiegyllenhaal_actorid = get_maggiegyllenhaal_row["id"]
 
 get_tomhardy_row = get_actors_table.find_by({"name" => "Tom Hardy"})
-get_tomhardy_actorid = tomhardy_row["id"]
+get_tomhardy_actorid = get_tomhardy_row["id"]
 
 get_josephgordonlevitt_row = get_actors_table.find_by({"name" => "Joseph Gordon-Levitt"})
-get_josephgordonlevitt_actorid = josephgordonlevitt_row["id"]
+get_josephgordonlevitt_actorid = get_josephgordonlevitt_row["id"]
 
 get_annehathaway_row = get_actors_table.find_by({"name" => "Anne Hathaway"})
-get_annehathaway_actorid = annehathaway_row["id"]
-
-
-
-
-
-
-
-
-
-
-
-
+get_annehathaway_actorid = get_annehathaway_row["id"]
 
 
 new_row_roles_table = Role.new
@@ -246,6 +234,85 @@ new_row_roles_table = Role.new
     new_row_roles_table["actor_id"] = get_michaelcaine_actorid
     new_row_roles_table["character_name"] = "Alfred"
 new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_batmanbegins_movieid
+    new_row_roles_table["actor_id"] = get_liamneeson_actorid
+    new_row_roles_table["character_name"] = "Ra's Al Ghul"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_batmanbegins_movieid
+    new_row_roles_table["actor_id"] = get_katieholmes_actorid
+    new_row_roles_table["character_name"] = "Rachel Dawes"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_batmanbegins_movieid
+    new_row_roles_table["actor_id"] = get_garyoldman_actorid
+    new_row_roles_table["character_name"] = "Commissioner Gordon"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknight_movieid
+    new_row_roles_table["actor_id"] = get_christianbale_actorid
+    new_row_roles_table["character_name"] = "Bruce Wayne"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknight_movieid
+    new_row_roles_table["actor_id"] = get_heathledger_actorid
+    new_row_roles_table["character_name"] = "Joker"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknight_movieid
+    new_row_roles_table["actor_id"] = get_aaroneckhart_actorid
+    new_row_roles_table["character_name"] = "Harvey Dent"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknight_movieid
+    new_row_roles_table["actor_id"] = get_michaelcaine_actorid
+    new_row_roles_table["character_name"] = "Alfred"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknight_movieid
+    new_row_roles_table["actor_id"] = get_maggiegyllenhaal_actorid
+    new_row_roles_table["character_name"] = "Rachel Dawes"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknightrises_movieid
+    new_row_roles_table["actor_id"] = get_christianbale_actorid
+    new_row_roles_table["character_name"] = "Bruce Wayne"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknightrises_movieid
+    new_row_roles_table["actor_id"] = get_garyoldman_actorid
+    new_row_roles_table["character_name"] = "Commissioner Gordon"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknightrises_movieid
+    new_row_roles_table["actor_id"] = get_tomhardy_actorid
+    new_row_roles_table["character_name"] = "Bane"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknightrises_movieid
+    new_row_roles_table["actor_id"] = get_josephgordonlevitt_actorid
+    new_row_roles_table["character_name"] = "John Blake"
+new_row_roles_table.save
+
+new_row_roles_table = Role.new
+    new_row_roles_table["movie_id"] = get_thedarkknightrises_movieid
+    new_row_roles_table["actor_id"] = get_annehathaway_actorid
+    new_row_roles_table["character_name"] = "Selina Kyle"
+new_row_roles_table.save
+
 
 
 
