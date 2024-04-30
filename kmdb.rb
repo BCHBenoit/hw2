@@ -324,6 +324,24 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
+get_movies_table = Movie.all
+row_movies = 0
+
+get_studios_table = Studio.all
+studio_name = 0
+
+
+for row_movies in get_movies_table
+    row_movies
+    row_movies["title"]
+    row_movies["year_released"]
+    row_movies["rated"]
+    studio_id = row_movies["studio_id"]
+    studio_name = get_studios_table.find_by({"id" => studio_id})["name"]
+    p "#{row_movies["title"]} #{row_movies["year_released"]} #{row_movies["rated"]} #{studio_name}"
+end
+    
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
